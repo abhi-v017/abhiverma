@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #F4F4F0;
+  --foreground: #0A0A0A;
+  --accent: #2A48FF; /* Deep blue for better contrast on light */
+  --muted: #888888;
+}
+
+.dark {
+  --background: #0A0A0A;
+  --foreground: #F4F4F0;
+  --accent: #00F0FF;
+  --muted: #888888;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  overflow-x: hidden;
+}
+
+/* Custom Cursor - desktop only */
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
+
+::selection {
+  background: #00F0FF;
+  color: #0A0A0A;
+}
+
+/* Beautiful Focus States for Accessibility */
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+/* Hide scrollbar for clean look */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
