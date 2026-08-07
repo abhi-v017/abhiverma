@@ -17,9 +17,11 @@ export const About = () => {
     <section id="about" ref={ref} className="py-48 px-8 md:px-16 relative overflow-hidden bg-background">
       {/* Dynamic Background Typography */}
       <motion.div 
-        style={{ x: useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]) }}
+        style={{ 
+          x: useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]),
+          WebkitTextStroke: "2px var(--foreground)" 
+        }}
         className="absolute top-1/2 left-0 -translate-y-1/2 text-[30vw] font-display font-black text-transparent opacity-5 pointer-events-none whitespace-nowrap"
-        style={{ WebkitTextStroke: "2px var(--foreground)" }}
         aria-hidden="true"
       >
         CREATIVE CODING
