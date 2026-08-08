@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import aboutImg from "@/assets/about.jpeg";
 
 export const About = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -63,7 +64,7 @@ export const About = () => {
         <div className="w-full md:w-1/2 h-[70vh] relative overflow-hidden rounded-2xl group">
           <motion.div style={{ y, opacity }} className="w-full h-[120%] absolute -top-[10%] left-0 bg-muted/20 dark:bg-neutral-900 flex items-center justify-center">
             <div className="w-full h-full bg-gradient-to-br from-neutral-200 to-white dark:from-neutral-800 dark:to-black opacity-80" />
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay grayscale group-hover:grayscale-0 transition-all duration-1000" />
+            <div className="absolute inset-0 bg-cover bg-center mix-blend-overlay grayscale group-hover:grayscale-0 transition-all duration-1000" style={{ backgroundImage: `url(${aboutImg.src})` }} />
           </motion.div>
         </div>
 

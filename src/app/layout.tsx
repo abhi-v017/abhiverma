@@ -6,6 +6,7 @@ import { SmoothScroll } from "@/components/SmoothScroll";
 import { Navbar } from "@/components/Navbar";
 import { Noise } from "@/components/Noise";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import logoImg from "@/assets/logo.png";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit", display: "swap" });
@@ -13,6 +14,9 @@ const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit", display: 
 export const metadata: Metadata = {
   title: "Abhishek Verma | Full Stack Developer",
   description: "Full stack web developer and AI enthusiast portfolio",
+  icons: {
+    icon: logoImg.src,
+  },
 };
 
 export default function RootLayout({
