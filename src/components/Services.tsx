@@ -1,41 +1,33 @@
 "use client";
 
-import { motion } from "framer-motion";
-
-const SERVICES = [
-  "Full Stack Development",
-  "React & Next.js",
-  "Node.js & Express",
-  "MongoDB & Redis",
-  "React Native (Expo)",
-  "REST API & WebRTC",
-  "Tailwind CSS",
-  "AI Integration"
-];
+const SKILLS = {
+  Languages: ["JavaScript (ES6+)", "Python", "TypeScript", "C++"],
+  Frontend: ["React.js", "React Native (Expo)", "Next.js", "Tailwind CSS", "HTML5/CSS3"],
+  Backend: ["Node.js", "Express.js", "REST API Design", "Socket.io", "WebRTC", "JWT"],
+  Database: ["MongoDB", "Mongoose ODM", "Redis", "Firebase"],
+  SystemDesign: ["Caching", "Database Indexing", "Load Balancing", "Scalable APIs"]
+};
 
 export const Services = () => {
   return (
-    <section id="services" className="py-24 md:py-48 bg-accent text-background overflow-hidden relative" aria-label="My Services">
-      <div className="flex border-y border-background/20 py-8">
-        <motion.div
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{ ease: "linear", duration: 25, repeat: Infinity }}
-          className="flex whitespace-nowrap"
-        >
-          {/* Double the array for seamless loop */}
-          {[...SERVICES, ...SERVICES].map((service, index) => (
-            <div 
-              key={index} 
-              className="flex items-center"
-              aria-hidden={index >= SERVICES.length ? "true" : "false"}
-            >
-              <span className="font-display text-4xl md:text-7xl font-black uppercase px-8 md:px-12 tracking-tighter">
-                {service}
-              </span>
-              <span className="text-2xl md:text-4xl opacity-50">✦</span>
-            </div>
-          ))}
-        </motion.div>
+    <section className="py-24 px-8 md:px-16 max-w-4xl mx-auto border-t border-ink/10">
+      <h2 className="text-3xl font-serif font-bold mb-12 text-center">Technical Toolkit</h2>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+        {Object.entries(SKILLS).map(([category, items]) => (
+          <div key={category}>
+            <h3 className="font-bold text-accent uppercase tracking-wider text-sm mb-3">
+              {category.replace(/([A-Z])/g, ' $1').trim()}
+            </h3>
+            <ul className="flex flex-wrap gap-2">
+              {items.map(item => (
+                <li key={item} className="bg-white border border-ink/10 shadow-sm px-3 py-1 rounded-md text-sm text-ink-soft">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </section>
   );

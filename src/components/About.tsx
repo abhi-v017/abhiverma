@@ -1,74 +1,42 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import Image from "next/image";
 import aboutImg from "@/assets/about.jpeg";
 
 export const About = () => {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], ["20%", "-20%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0]);
-
   return (
-    <section id="about" ref={ref} className="py-48 px-8 md:px-16 relative overflow-hidden bg-background">
-      {/* Dynamic Background Typography */}
-      <motion.div 
-        style={{ 
-          x: useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]),
-          WebkitTextStroke: "2px var(--foreground)" 
-        }}
-        className="absolute top-1/2 left-0 -translate-y-1/2 text-[30vw] font-display font-black text-transparent opacity-5 pointer-events-none whitespace-nowrap"
-        aria-hidden="true"
-      >
-        CREATIVE CODING
-      </motion.div>
-
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-24 items-center relative z-10">
-        
-        <div className="w-full md:w-1/2 flex flex-col gap-12">
-          <div className="overflow-hidden">
-            <motion.h2 
-              initial={{ y: "100%" }}
-              whileInView={{ y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
-              className="font-display text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.9]"
-            >
-              Code with <br /> <span className="text-accent italic font-medium tracking-tight">Purpose.</span>
-            </motion.h2>
+    <section id="about" className="py-24 px-8 md:px-16">
+      <div className="max-w-5xl mx-auto flex flex-col-reverse md:flex-row items-center gap-16">
+          
+          <div className="w-full md:w-2/5 flex justify-center">
+            <div className="polaroid -rotate-3 max-w-[260px]">
+              <div className="relative w-full aspect-[4/5]">
+                <Image 
+                  src={aboutImg} 
+                  alt="Abhishek Verma" 
+                  fill 
+                  className="object-cover"
+                />
+              </div>
+              <div className="text-center font-hand text-2xl mt-4 text-ink">hi again 👋</div>
+            </div>
           </div>
           
-          <div className="overflow-hidden">
-            <motion.div
-              initial={{ y: "100%", opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 1, delay: 0.2, ease: [0.76, 0, 0.24, 1] }}
-              className="text-lg md:text-xl text-foreground/70 font-light leading-relaxed space-y-8"
-            >
+          <div className="w-full md:w-3/5">
+            <span className="text-accent uppercase tracking-widest text-sm font-bold mb-2 block">about me</span>
+            <h2 className="text-4xl font-serif font-bold mb-6">A developer who loves solving problems</h2>
+            <div className="text-ink-soft space-y-4 leading-relaxed text-lg">
               <p>
-                I'm a full-stack developer experienced in building production-grade web and mobile applications using the MERN stack.
+                I'm a full-stack developer with a deep passion for building things from scratch. I don't just write code; I architect systems that can scale.
               </p>
               <p>
-                With a strong foundation in Data Structures, Algorithms, and System Design, I focus on building scalable systems, real-time applications, and integrating AI APIs to solve real-world problems.
+                With a strong foundation in Data Structures, Algorithms, and System Design, I've independently designed, built, and deployed production-grade applications. Whether it's integrating real-time WebSockets, designing REST APIs, or exploring the latest AI tools, I'm always looking for the most efficient way to solve real-world problems.
               </p>
-            </motion.div>
+            </div>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="btn ghost mt-8">Connect on LinkedIn</a>
           </div>
+          
         </div>
-
-        <div className="w-full md:w-1/2 h-[70vh] relative overflow-hidden rounded-2xl group">
-          <motion.div style={{ y, opacity }} className="w-full h-[120%] absolute -top-[10%] left-0 bg-muted/20 dark:bg-neutral-900 flex items-center justify-center">
-            <div className="w-full h-full bg-gradient-to-br from-neutral-200 to-white dark:from-neutral-800 dark:to-black opacity-80" />
-            <div className="absolute inset-0 bg-cover bg-center mix-blend-overlay grayscale group-hover:grayscale-0 transition-all duration-1000" style={{ backgroundImage: `url(${aboutImg.src})` }} />
-          </motion.div>
-        </div>
-
-      </div>
-    </section>
+      </section>
   );
 };

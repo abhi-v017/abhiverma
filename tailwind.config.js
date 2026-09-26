@@ -8,15 +8,24 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
-      colors: {
-        background: "#0A0A0A",
-        foreground: "#F4F4F0",
-        accent: "#00F0FF",
-        muted: "#888888",
-      },
       fontFamily: {
-        sans: ["var(--font-inter)", "sans-serif"],
-        display: ["var(--font-outfit)", "sans-serif"],
+        serif: ['var(--font-averia)', 'serif'],
+        sans: ['var(--font-poppins)', 'sans-serif'],
+        hand: ['var(--font-caveat)', 'cursive'],
+      },
+      colors: {
+        cream: "#FAF7F2",
+        paper: "#F4ECE0",
+        card: "#FFFCF6",
+        coral: "#D97757",
+        terra: "#C96F4C",
+        ink: "#332E29",
+        "ink-soft": "#736a60",
+        accent: "#D97757", // Set to coral
+        surface: "#FFFCF6",
+      },
+      boxShadow: {
+        'polaroid': '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
       }
     },
   },
