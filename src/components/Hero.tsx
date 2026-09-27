@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import aboutImg from "@/assets/about.jpeg";
+import aboutImg from "@/assets/about.png";
 
 export const Hero = () => {
   return (
