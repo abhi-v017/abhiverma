@@ -10,16 +10,16 @@ export const Navbar = () => {
   
   return (
     <>
-      <header className="w-full py-6 px-8 md:px-16 flex justify-between items-center z-50 relative">
-        <Link href="/" className="font-serif font-bold text-2xl tracking-tight relative z-50">
+      <header className="sticky top-0 w-full py-2 px-8 md:px-16 flex justify-around items-center z-50 bg-cream/40 backdrop-blur-xl border-b border-ink/5 shadow-sm">
+        <Link href="/" className="font-serif font-bold text-xl tracking-tight relative z-50">
           Abhishek Verma<span className="text-accent">.</span>
         </Link>
         
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8 font-medium relative z-50">
+        <nav className="hidden md:flex items-center gap-8 font-light relative z-50">
           <Link href="/" className={`${pathname === '/' ? 'text-accent' : 'text-ink'} hover:text-accent transition-colors`}>Home</Link>
           <Link href="/about" className={`${pathname === '/about' ? 'text-accent' : 'text-ink'} hover:text-accent transition-colors`}>About & Works</Link>
-          <Link href="/notes" className={`${pathname === '/notes' ? 'text-accent' : 'text-ink'} hover:text-accent transition-colors`}>Dev Notes</Link>
+          <Link href="/notes" className={`${pathname === '/notes' ? 'text-accent' : 'text-ink'} hover:text-accent transition-colors`}>Resources</Link>
           {/* <Link href="/blog" className={`${pathname === '/blog' ? 'text-accent' : 'text-ink'} hover:text-accent transition-colors`}>Blog</Link> */}
           <Link href="/contact" className="btn ml-4">Work with me</Link>
         </nav>

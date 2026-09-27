@@ -2,6 +2,7 @@
 
 import { Hero } from "@/components/Hero";
 import Link from "next/link";
+import { About } from "@/components/About";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -9,18 +10,11 @@ export default function Home() {
     <>
       <Hero />
       
-      <section className="py-24 px-8 md:px-16 text-center">
-        <div className="max-w-2xl mx-auto">
-          <span className="font-hand text-2xl text-accent block mb-4">the short version</span>
-          <h2 className="text-4xl font-serif font-bold mb-6">I turn complex ideas into robust systems.</h2>
-          <p className="text-ink-soft text-lg mb-8">
-            From architecture and API design to UI development and deployment, I specialize in building end-to-end products that perform flawlessly.
-          </p>
-          <div className="flex justify-center gap-4">
-            <Link href="/about" className="btn">See my work & skills</Link>
-          </div>
-        </div>
-      </section>
+      <div className="py-12">
+        <About />
+      </div>
+      
+      <div className="divider"></div>
       
       <div className="px-8 mb-8 mt-12">
         <div className="tape max-w-2xl mx-auto relative group cursor-pointer hover:-translate-y-1 transition-transform">

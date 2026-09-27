@@ -7,39 +7,46 @@ import aboutImg from "@/assets/about.jpeg";
 export const Hero = () => {
   return (
     <section className="max-w-6xl mx-auto px-8 md:px-16 pt-12 pb-24 flex flex-col md:flex-row items-center gap-12">
-      <div className="w-full md:w-3/5 flex flex-col items-start">
-        <span className="font-hand text-3xl text-ink-soft rotate-[-2deg] mb-2">hi, I'm</span>
-        <h1 className="text-6xl md:text-8xl font-serif font-bold mb-6">
-          Abhishek <span className="underline decoration-accent decoration-4 underline-offset-4">Verma</span>
+      <div className="w-full md:w-[55%] flex flex-col items-start pt-8">
+        <span className="font-hand text-3xl text-terra rotate-[-2deg] mb-1">hi, I'm</span>
+        <h1 className="text-7xl md:text-[5.5rem] font-serif font-bold mb-6 tracking-tight text-ink flex items-end gap-3">
+          Abhishek 
+          <span className="relative inline-block z-10 text-terra after:content-[''] after:absolute after:bottom-3 after:-left-2 after:w-[110%] after:h-[35%] after:bg-[#ECBCA8] after:-z-10">Verma</span>
         </h1>
         
-        <span className="text-xl md:text-2xl font-serif text-ink-soft mb-6 block">
-          Full stack developer & AI enthusiast
-        </span>
+        <div className="inline-block border border-dashed border-terra rounded-[2rem] px-5 py-2 font-hand text-ink text-[1.4rem] mb-8 bg-paper/50 rotate-[-1deg] shadow-sm">
+          Full stack developer, built in the real world
+        </div>
         
-        <p className="text-lg text-ink-soft mb-8 leading-relaxed max-w-lg">
+        <p className="font-sans font-light text-ink-soft mb-8 leading-[1.8] text-[1.1rem] max-w-lg">
           I build production-grade web and mobile applications using the MERN stack. No buzzwords, just solid engineering, scalable systems, and clean code that actually solves real-world problems.
         </p>
         
-        <div className="flex flex-wrap gap-4 mb-4">
-          <Link href="/contact" className="btn">Work with me</Link>
-          <a href="https://github.com/vermabhi" target="_blank" rel="noopener noreferrer" className="btn ghost">Browse GitHub</a>
+        <div className="flex flex-wrap gap-4 mb-6">
+          <Link href="/contact" className="btn">Join the waitlist</Link>
+          <a href="/notes" className="btn ghost">Browse free guides</a>
         </div>
         
-        <span className="font-hand text-accent text-2xl rotate-[-2deg] mt-2 inline-block">
-          p.s. actively exploring open source →
+        <span className="font-hand text-terra text-2xl rotate-[-2deg] mt-2 mb-4 inline-block">
+          p.s. actively exploring open source &rarr;
         </span>
         
-        <div className="flex gap-8 mt-12 pt-8 border-t border-ink/10">
-          <div><b className="block text-xl">150+</b> <span className="text-sm text-ink-soft">DSA Problems Solved</span></div>
-          <div><b className="block text-xl">MERN</b> <span className="text-sm text-ink-soft">Stack Expert</span></div>
-          <div><b className="block text-xl">2+</b> <span className="text-sm text-ink-soft">Production Apps</span></div>
+        <div className="flex flex-wrap gap-3 mt-2 max-w-lg">
+          <div className="bg-paper/50 px-5 py-2 rounded-full flex items-center gap-1.5 border border-ink/20 font-hand text-xl">
+            <span className="text-terra">150+</span> <span className="text-ink">DSA Problems Solved</span>
+          </div>
+          <div className="bg-paper/50 px-5 py-2 rounded-full flex items-center gap-1.5 border border-ink/20 font-hand text-xl">
+            <span className="text-terra">MERN</span> <span className="text-ink">Stack Expert</span>
+          </div>
+          <div className="bg-paper/50 px-5 py-2 rounded-full flex items-center gap-1.5 border border-ink/20 font-hand text-xl">
+            <span className="text-terra">2+</span> <span className="text-ink">Production Apps</span>
+          </div>
         </div>
       </div>
       
-      <div className="w-full md:w-2/5 flex justify-center mt-12 md:mt-0">
-        <div className="polaroid rotate-3">
-          <div className="relative w-64 h-80">
+      <div className="w-full md:w-[45%] flex justify-center mt-16 md:mt-0">
+        <div className="polaroid tape-pink rotate-[4deg]">
+          <div className="relative w-[280px] h-[350px]">
             <Image 
               src={aboutImg} 
               alt="Abhishek Verma" 
@@ -48,7 +55,7 @@ export const Hero = () => {
               priority
             />
           </div>
-          <div className="text-center font-hand text-2xl mt-4 text-ink">Coding always ✨</div>
+          <div className="absolute -bottom-4 -left-6 bg-[#A9B89E] text-white font-hand text-xl px-4 py-1 rounded-lg -rotate-6 shadow-md border border-white/20 z-20">AI obsessed ✨</div>
         </div>
       </div>
     </section>

@@ -15,6 +15,8 @@ export default function AboutPage() {
       <Services />
       <Works />
       
+      <div className="divider"></div>
+      
       <div className="px-8 mb-8 mt-12">
         <div className="tape max-w-2xl mx-auto relative group cursor-pointer hover:-translate-y-1 transition-transform">
           <span className="font-hand text-3xl text-accent block mb-2 rotate-2">hire me</span>
