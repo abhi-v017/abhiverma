@@ -9,94 +9,128 @@ export default function NotesPage() {
 
   const NOTES = [
     {
-      id: "javascript",
-      icon: "💛",
-      title: "JavaScript / ES6+",
-      desc: "Event loop, closures, promises, and the weird parts of JS.",
-      tags: ["Frontend", "Core"],
+      id: "c",
+      icon: "⚙️",
+      title: "C Programming",
+      desc: "Memory management, pointers, and systems programming basics.",
+      tags: ["Systems", "Coming Soon"],
       rotation: "-rotate-1",
     },
     {
-      id: "typescript",
-      icon: "💙",
-      title: "TypeScript",
-      desc: "Generics, utility types, and strict type safety patterns.",
-      tags: ["Type system", "Advanced"],
+      id: "cpp",
+      icon: "🚀",
+      title: "C++",
+      desc: "Object-oriented programming, STL, and competitive programming.",
+      tags: ["OOP", "Coming Soon"],
       rotation: "rotate-2",
     },
     {
-      id: "react",
-      icon: "⚛️",
-      title: "React & Next.js",
-      desc: "App router, server components, hooks under the hood.",
-      tags: ["Frontend", "Framework"],
+      id: "java",
+      icon: "☕",
+      title: "Java",
+      desc: "Enterprise architecture, multithreading, and the JVM.",
+      tags: ["Backend", "Coming Soon"],
       rotation: "-rotate-2",
     },
     {
-      id: "node",
-      icon: "🟢",
-      title: "Node.js & Express",
-      desc: "Event-driven architecture, streams, and scaling servers.",
-      tags: ["Backend", "Core"],
+      id: "python",
+      icon: "🐍",
+      title: "Python",
+      desc: "Data structures, scripting, and automation cheat codes.",
+      tags: ["Scripting", "Coming Soon"],
       rotation: "rotate-1",
     },
     {
-      id: "db",
-      icon: "🗄️",
-      title: "Databases",
-      desc: "Indexing, caching strategies, and data modeling.",
-      tags: ["Architecture", "Data"],
-      rotation: "rotate-2",
+      id: "javascript",
+      icon: "💛",
+      title: "JavaScript",
+      desc: "Event loop, closures, promises, and the weird parts of JS.",
+      tags: ["Web", "Coming Soon"],
+      rotation: "-rotate-1",
     },
     {
       id: "dsa",
       icon: "🧠",
-      title: "Data Structures",
+      title: "Data Structures & Algorithms",
       desc: "Trees, graphs, dynamic programming, and patterns.",
-      tags: ["Interview prep", "Logic"],
-      rotation: "-rotate-1",
+      tags: ["Interview Prep", "Coming Soon"],
+      rotation: "rotate-2",
     },
   ];
 
   const ROADMAPS = [
     {
-      id: "fullstack",
-      icon: "🗺️",
-      title: "Full-Stack Web Dev Roadmap",
-      desc: "The exact path I took from zero to building production MERN applications.",
-      tags: ["Beginner", "Career"],
+      id: "web-dev",
+      icon: "🌐",
+      title: "Web Development",
+      desc: "From HTML/CSS to full-stack scalable MERN applications.",
+      tags: ["Frontend", "Coming Soon"],
       rotation: "rotate-1",
     },
     {
-      id: "backend-scale",
-      icon: "🚀",
-      title: "Scaling Node.js Systems",
-      desc: "A step-by-step roadmap for microservices, message queues, and load balancing.",
-      tags: ["Advanced", "Architecture"],
+      id: "app-dev",
+      icon: "📱",
+      title: "App Development",
+      desc: "Building cross-platform mobile experiences with React Native.",
+      tags: ["Mobile", "Coming Soon"],
+      rotation: "-rotate-2",
+    },
+    {
+      id: "game-dev",
+      icon: "🎮",
+      title: "Game Development",
+      desc: "Game loops, physics, and rendering engines.",
+      tags: ["Gaming", "Coming Soon"],
+      rotation: "rotate-2",
+    },
+    {
+      id: "data-analytics",
+      icon: "📊",
+      title: "Data Analytics",
+      desc: "SQL, data visualization, and extracting insights from noise.",
+      tags: ["Data", "Coming Soon"],
+      rotation: "-rotate-1",
+    },
+    {
+      id: "data-science",
+      icon: "🔬",
+      title: "Data Science",
+      desc: "Statistics, predictive modeling, and data pipelines.",
+      tags: ["Math", "Coming Soon"],
+      rotation: "rotate-1",
+    },
+    {
+      id: "ai-ml",
+      icon: "🤖",
+      title: "AI/ML Engineer",
+      desc: "Neural networks, LLMs, and building intelligent systems.",
+      tags: ["AI", "Coming Soon"],
       rotation: "-rotate-2",
     }
   ];
 
   return (
     <>
-      <section className="pt-24 pb-12 px-8 md:px-16 max-w-6xl mx-auto min-h-[75vh]">
+      <section className="pt-24 pb-12 px-6 md:px-16 max-w-6xl mx-auto min-h-[75vh]">
         <div className="text-center mb-12">
           <span className="font-hand text-3xl text-accent block mb-2 -rotate-2">free guides</span>
-          <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6">Resources Library</h1>
-          <p className="text-ink-soft text-lg max-w-2xl mx-auto mb-10">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-6">Resources Library</h1>
+          <p className="text-ink-soft text-base md:text-lg max-w-2xl mx-auto mb-10">
             I'm constantly learning and documenting. Here is where I drop my personal notes, cheatsheets, deep dives, and learning roadmaps.
           </p>
           
-          <div className="inline-flex bg-paper/50 p-1.5 rounded-full border border-ink/10 shadow-sm">
+          <div className="relative z-10 inline-flex flex-wrap justify-center bg-paper/50 p-1.5 rounded-full border border-ink/10 shadow-sm cursor-pointer">
             <button 
+              type="button"
               onClick={() => setActiveTab('notes')}
-              className={`px-6 py-2.5 rounded-full font-sans font-medium transition-all duration-300 ${activeTab === 'notes' ? 'bg-terra text-white shadow-md' : 'text-ink-soft hover:text-ink'}`}
+              className={`px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-sans font-medium transition-all duration-300 ${activeTab === 'notes' ? 'bg-terra text-white shadow-md' : 'text-ink-soft hover:text-ink'}`}
             >
               Dev Notes
             </button>
             <button 
+              type="button"
               onClick={() => setActiveTab('roadmaps')}
-              className={`px-6 py-2.5 rounded-full font-sans font-medium transition-all duration-300 ${activeTab === 'roadmaps' ? 'bg-terra text-white shadow-md' : 'text-ink-soft hover:text-ink'}`}
+              className={`px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-sans font-medium transition-all duration-300 ${activeTab === 'roadmaps' ? 'bg-terra text-white shadow-md' : 'text-ink-soft hover:text-ink'}`}
             >
               Roadmaps
             </button>

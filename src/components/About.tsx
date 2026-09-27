@@ -8,8 +8,8 @@ export const About = () => {
     <section id="about" className="py-24 px-8 md:px-16">
       <div className="max-w-5xl mx-auto flex flex-col-reverse md:flex-row items-center gap-16">
           
-          <div className="w-full md:w-2/5 flex justify-center">
-            <div className="polaroid -rotate-3 max-w-[260px]">
+          <div className="w-full md:w-1/2 flex justify-center">
+            <div className="polaroid -rotate-3 w-full max-w-[380px]">
               <div className="relative w-full aspect-[4/5]">
                 <Image 
                   src={aboutImg} 
@@ -22,7 +22,7 @@ export const About = () => {
             </div>
           </div>
           
-          <div className="w-full md:w-3/5">
+          <div className="w-full md:w-1/2">
             <span className="text-accent uppercase tracking-widest text-sm font-bold mb-2 block">about me</span>
             <h2 className="text-4xl font-serif font-bold mb-6">A developer who loves solving problems</h2>
             <div className="text-ink-soft space-y-4 leading-relaxed text-lg">

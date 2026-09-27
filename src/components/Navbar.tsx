@@ -49,8 +49,7 @@ export const Navbar = () => {
           <nav className="flex flex-col items-center gap-8 font-hand text-4xl">
             <Link onClick={() => setIsMobileMenuOpen(false)} href="/" className={`${pathname === '/' ? 'text-accent' : 'text-ink'} hover:-translate-y-1 transition-transform rotate-1`}>Home</Link>
             <Link onClick={() => setIsMobileMenuOpen(false)} href="/about" className={`${pathname === '/about' ? 'text-accent' : 'text-ink'} hover:-translate-y-1 transition-transform -rotate-2`}>About & Works</Link>
-            <Link onClick={() => setIsMobileMenuOpen(false)} href="/notes" className={`${pathname === '/notes' ? 'text-accent' : 'text-ink'} hover:-translate-y-1 transition-transform rotate-2`}>Dev Notes</Link>
-            <Link onClick={() => setIsMobileMenuOpen(false)} href="/contact" className={`${pathname === '/contact' ? 'text-accent' : 'text-ink'} hover:-translate-y-1 transition-transform -rotate-1`}>Contact</Link>
+            <Link onClick={() => setIsMobileMenuOpen(false)} href="/notes" className={`${pathname === '/notes' ? 'text-accent' : 'text-ink'} hover:-translate-y-1 transition-transform rotate-2`}>Resources</Link>
           </nav>
           
           <div className="mt-16">
