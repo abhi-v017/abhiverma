@@ -3,6 +3,32 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --cream: 250 247 242;
+    --paper: 244 236 224;
+    --card: 255 252 246;
+    --coral: 217 119 87;
+    --terra: 201 111 76;
+    --ink: 51 46 41;
+    --ink-soft: 115 106 96;
+    --accent: 217 119 87;
+    --surface: 255 252 246;
+  }
+  
+  .dark {
+    --cream: 26 25 24;
+    --paper: 34 32 30;
+    --card: 42 38 34;
+    --coral: 228 145 118;
+    --terra: 201 111 76;
+    --ink: 250 247 242;
+    --ink-soft: 168 160 150;
+    --accent: 201 111 76;
+    --surface: 34 32 30;
+  }
+}
+
+@layer base {
   body {
     @apply bg-cream text-ink font-sans antialiased;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.12'/%3E%3C/svg%3E");
@@ -15,11 +41,11 @@
 
 @layer components {
   .divider {
-    @apply w-full border-t border-dashed border-ink/10 my-16 relative flex justify-center opacity-70;
+    @apply w-full border-t border-dashed border-ink/10 dark:border-cream/20 my-16 relative flex justify-center opacity-70 transition-colors duration-500;
   }
 
   .polaroid {
-    @apply bg-white p-4 shadow-polaroid rounded-sm relative inline-block transition-transform duration-300;
+    @apply bg-white dark:bg-[#2A2622] p-4 shadow-polaroid rounded-sm relative inline-block transition-all duration-500;
   }
   
   .polaroid::before {
@@ -58,7 +84,7 @@
   }
 
   .tape {
-    @apply p-8 sm:p-10 md:p-12 relative border border-ink/10 shadow-sm max-w-2xl mx-auto text-center rounded-2xl bg-[#EBDFC9];
+    @apply p-8 sm:p-10 md:p-12 relative border border-ink/10 dark:border-cream/10 shadow-sm max-w-2xl mx-auto text-center rounded-2xl bg-[#EBDFC9] dark:bg-[#2A2622] transition-colors duration-500;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.20'/%3E%3C/svg%3E");
   }
   
@@ -71,7 +97,7 @@
 
   /* Colored Tapes for Cards */
   .fcard {
-    @apply bg-[#E8DCC8] p-8 rounded-2xl shadow-sm border border-ink/5 hover:-translate-y-1 hover:shadow-md transition-all duration-300 relative;
+    @apply bg-[#E8DCC8] dark:bg-[#2A2622] p-8 rounded-2xl shadow-sm border border-ink/5 dark:border-cream/5 hover:-translate-y-1 hover:shadow-md transition-all duration-300 relative;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.20'/%3E%3C/svg%3E");
   }
   

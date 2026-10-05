@@ -33,18 +33,22 @@ export const metadata: Metadata = {
   },
 };
 
+import { Providers } from "./providers";
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${averia.variable} ${poppins.variable} ${caveat.variable} font-sans bg-paper text-ink antialiased`}>
-        <Navbar />
-        <main className="min-h-screen">
-          {children}
-        </main>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${averia.variable} ${poppins.variable} ${caveat.variable} font-sans bg-cream text-ink antialiased transition-colors duration-500`}>
+        <Providers>
+          <Navbar />
+          <main className="min-h-screen">
+            {children}
+          </main>
+        </Providers>
       </body>
     </html>
   );
