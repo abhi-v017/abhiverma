@@ -13,8 +13,9 @@ export default function NotesPage() {
       icon: "⚙️",
       title: "C Programming",
       desc: "Memory management, pointers, and systems programming basics.",
-      tags: ["Systems", "Coming Soon"],
+      tags: ["Systems", "Available"],
       rotation: "-rotate-1",
+      link: "https://drive.google.com/file/d/13KgmHR0Fa7YYxfqFiUnFz1sSKgfV6svw/view?usp=drive_link"
     },
     {
       id: "cpp",
@@ -64,48 +65,81 @@ export default function NotesPage() {
       icon: "🌐",
       title: "Web Development",
       desc: "From HTML/CSS to full-stack scalable MERN applications.",
-      tags: ["Frontend", "Coming Soon"],
+      tags: ["Frontend", "Backend"],
       rotation: "rotate-1",
+      link: "https://drive.google.com/file/d/1AxPPDEVPoN60PVDjZWwecpCTNRAEcYcH/view?usp=drive_link"
     },
     {
       id: "app-dev",
       icon: "📱",
       title: "App Development",
       desc: "Building cross-platform mobile experiences with React Native.",
-      tags: ["Mobile", "Coming Soon"],
+      tags: ["Mobile",],
       rotation: "-rotate-2",
+      link: "https://drive.google.com/file/d/1pOue8-NVX60E34QUsAKTZihwNW3Qu9aY/view?usp=drive_link"
     },
     {
       id: "game-dev",
       icon: "🎮",
       title: "Game Development",
       desc: "Game loops, physics, and rendering engines.",
-      tags: ["Gaming", "Coming Soon"],
+      tags: ["Gaming"],
       rotation: "rotate-2",
+      link:"https://drive.google.com/file/d/1ERTrF0Jon_gY6cW9mq2iQew0m_xrfhke/view?usp=drive_link"
+    },
+    {
+      id: "DevOps",
+      icon: "⚙️",
+      title: "DevOps",
+      desc: "CI/CD, containerization, and cloud infrastructure.",
+      tags: ["Cloud"],
+      rotation: "-rotate-1",
+      link:"https://drive.google.com/file/d/14YwIAuM_g_J0Q7ZExBZ0Xm8PDwUFLmJS/view?usp=drive_link"
+    },
+    {
+      id: "Software-Engineering",
+      icon: "💻",
+      title: "Software Engineering",
+      desc: "System design, architecture patterns, and scalable solutions.",
+      tags: ["Engineering"],
+      rotation: "rotate-2",
+      link:"https://drive.google.com/file/d/1xh3sdLRMv5SthX9eTZRJNdz5gq5pBENy/view?usp=drive_link"
     },
     {
       id: "data-analytics",
       icon: "📊",
       title: "Data Analytics",
       desc: "SQL, data visualization, and extracting insights from noise.",
-      tags: ["Data", "Coming Soon"],
+      tags: ["Data"],
       rotation: "-rotate-1",
+      link:"https://drive.google.com/file/d/1UsvQ2Yd_5rDVHA1gKaK-uFfqUTuIvubQ/view?usp=drive_link"
     },
     {
       id: "data-science",
       icon: "🔬",
       title: "Data Science",
       desc: "Statistics, predictive modeling, and data pipelines.",
-      tags: ["Math", "Coming Soon"],
+      tags: ["Math"],
       rotation: "rotate-1",
+      link:"https://drive.google.com/file/d/1HFhvwgyVpv_Rb4I6wIT34wB3_hQWAx5s/view?usp=drive_link"
     },
     {
       id: "ai-ml",
       icon: "🤖",
       title: "AI/ML Engineer",
       desc: "Neural networks, LLMs, and building intelligent systems.",
-      tags: ["AI", "Coming Soon"],
+      tags: ["AI",],
       rotation: "-rotate-2",
+      link:"https://drive.google.com/file/d/1l_6z4adQGtwn1vGhvPUx7AT1F9JKHiV8/view?usp=drive_link"
+    },
+    {
+      id: "cybersecurity",
+      icon: "🤖",
+      title: "Cybersecurity Specialist",
+      desc: "Network security, ethical hacking, and protecting digital assets.",
+      tags: ["Security"],
+      rotation: "-rotate-2",
+      link:"https://drive.google.com/file/d/17hYDwF0S3yTDiFvxOkZJ52q9w4mzQTWq/view?usp=drive_link"
     }
   ];
 
@@ -156,9 +190,15 @@ export default function NotesPage() {
                   ))}
                 </div>
                 
-                <div className="font-hand text-terra text-xl hover:text-coral transition-colors cursor-pointer">
-                  Read guide &rarr;
-                </div>
+                {(note as any).link ? (
+                  <a href={(note as any).link} target="_blank" rel="noopener noreferrer" className="font-hand text-terra text-xl hover:text-coral transition-colors inline-block">
+                    Read guide &rarr;
+                  </a>
+                ) : (
+                  <div className="font-hand text-terra text-xl opacity-50 cursor-not-allowed inline-block">
+                    Read guide &rarr;
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -183,9 +223,15 @@ export default function NotesPage() {
                   ))}
                 </div>
                 
-                <div className="font-hand text-terra text-xl hover:text-coral transition-colors cursor-pointer">
-                  View roadmap &rarr;
-                </div>
+                {roadmap.link ? (
+                  <a href={roadmap.link} target="_blank" rel="noopener noreferrer" className="font-hand text-terra text-xl hover:text-coral transition-colors inline-block">
+                    View roadmap &rarr;
+                  </a>
+                ) : (
+                  <div className="font-hand text-terra text-xl opacity-50 cursor-not-allowed inline-block">
+                    View roadmap &rarr;
+                  </div>
+                )}
               </div>
             ))}
           </div>

@@ -5,11 +5,11 @@ import { Footer } from "@/components/Footer";
 export default function ContactPage() {
   const socialLinks = [
     { name: "Email", icon: "📧", url: "mailto:vermabhi.017@gmail.com", text: "vermabhi.017@gmail.com", rotation: "rotate-1" },
-    { name: "WhatsApp", icon: "💬", url: "https://wa.me/YOUR_NUMBER", text: "Message me", rotation: "-rotate-2" },
-    { name: "LinkedIn", icon: "💼", url: "https://linkedin.com", text: "Connect professionally", rotation: "-rotate-1" },
-    { name: "GitHub", icon: "💻", url: "https://github.com/vermabhi", text: "@vermabhi", rotation: "rotate-2" },
-    { name: "Twitter", icon: "🐦", url: "https://twitter.com", text: "Follow for updates", rotation: "rotate-1" },
-    { name: "Instagram", icon: "📸", url: "https://instagram.com", text: "Behind the scenes", rotation: "-rotate-1" },
+    { name: "WhatsApp", icon: "💬", url: "https://wa.me/8923675163", text: "Message me", rotation: "-rotate-2" },
+    { name: "LinkedIn", icon: "💼", url: "https://linkedin.com/in/vermabhi017", text: "Connect professionally", rotation: "-rotate-1" },
+    { name: "GitHub", icon: "💻", url: "https://github.com/abhi-v017", text: "@abhi-v017", rotation: "rotate-2" },
+    { name: "Twitter", icon: "🐦", url: "https://x.com/iamabek", text: "Follow for updates", rotation: "rotate-1" },
+    { name: "Instagram", icon: "📸", url: "https://www.instagram.com/abekdev.exe/", text: "Behind the scenes", rotation: "-rotate-1" },
   ];
 
   return (
