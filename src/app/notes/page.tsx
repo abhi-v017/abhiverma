@@ -50,12 +50,13 @@ export default function NotesPage() {
       rotation: "-rotate-1",
     },
     {
-      id: "dsa",
+      id: "HTML",
       icon: "🧠",
-      title: "Data Structures & Algorithms",
-      desc: "Trees, graphs, dynamic programming, and patterns.",
-      tags: ["Interview Prep", "Coming Soon"],
+      title: "HTML",
+      desc: "Building the foundation of web pages.",
+      tags: ["Frontend", "Coming Soon"],
       rotation: "rotate-2",
+      link: "https://drive.google.com/file/d/1ehekEhKsgdIPjmdRir-atr4H9uWXtXU4/view?usp=drive_link"
     },
   ];
 
