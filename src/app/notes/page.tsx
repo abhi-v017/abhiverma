@@ -13,7 +13,7 @@ export default function NotesPage() {
       icon: "⚙️",
       title: "C Programming",
       desc: "Memory management, pointers, and systems programming basics.",
-      tags: ["Systems", "Available"],
+      tags: ["Systems"],
       rotation: "-rotate-1",
       link: "https://drive.google.com/file/d/13KgmHR0Fa7YYxfqFiUnFz1sSKgfV6svw/view?usp=drive_link"
     },
@@ -30,8 +30,9 @@ export default function NotesPage() {
       icon: "☕",
       title: "Java",
       desc: "Enterprise architecture, multithreading, and the JVM.",
-      tags: ["Backend", "Coming Soon"],
+      tags: ["Backend"],
       rotation: "-rotate-2",
+      link: "https://drive.google.com/file/d/1LiPc98X913p9VFDrBLHQMYyjOWBqjsDs/view?usp=drive_link"
     },
     {
       id: "python",
@@ -54,10 +55,20 @@ export default function NotesPage() {
       icon: "🧠",
       title: "HTML",
       desc: "Building the foundation of web pages.",
-      tags: ["Frontend", "Coming Soon"],
+      tags: ["Frontend"],
       rotation: "rotate-2",
       link: "https://drive.google.com/file/d/1ehekEhKsgdIPjmdRir-atr4H9uWXtXU4/view?usp=drive_link"
     },
+    {
+      id: "CSS",
+      icon: "🧠",
+      title: "CSS",
+      desc: "Styling and layout for web pages.",
+      tags: ["Frontend"],
+      rotation: "rotate-2",
+      link: "https://drive.google.com/file/d/1L78zIi62bfspGBBrZ1dHdsaaLBjGdlro/view?usp=drive_link"
+    },
+
   ];
 
   const ROADMAPS = [
