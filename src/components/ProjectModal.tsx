@@ -94,7 +94,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.94, y: 20 }}
           transition={{ type: "spring", damping: 26, stiffness: 320 }}
-          className="relative z-10 w-full max-w-4xl max-h-[92vh] overflow-y-auto rounded-3xl bg-[#EBDFC9] dark:bg-[#25221F] border border-ink/15 dark:border-cream/10 shadow-2xl p-5 sm:p-8 md:p-10 text-ink dark:text-cream"
+          className="relative z-10 w-full max-w-4xl max-h-[92vh] overflow-y-auto rounded-3xl bg-[#EBDFC9] dark:bg-[#25221F] border border-ink/15 dark:border-white/15 shadow-2xl p-5 sm:p-8 md:p-10 text-ink dark:text-white"
           style={{
             backgroundImage:
               'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.8\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\' opacity=\'0.16\'/%3E%3C/svg%3E")',
@@ -131,7 +131,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                     🚧 In Making
                   </span>
                 ) : (
-                  <span className="font-hand text-sm px-3 py-0.5 rounded-full bg-[#A9B89E]/20 text-[#546b43] dark:text-[#a5c28e] border border-[#A9B89E]/40 shadow-sm -rotate-1">
+                  <span className="font-hand text-sm px-3 py-0.5 rounded-full bg-[#A9B89E]/20 text-[#546b43] dark:text-[#b4d69b] border border-[#A9B89E]/40 shadow-sm -rotate-1">
                     ✓ Shipped & Open
                   </span>
                 )}
@@ -140,10 +140,10 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
               <div className="flex items-center gap-3">
                 <span className="text-4xl md:text-5xl">{project.icon}</span>
                 <div>
-                  <h2 className="text-2xl sm:text-4xl font-serif font-bold tracking-tight">
+                  <h2 className="text-2xl sm:text-4xl font-serif font-bold tracking-tight text-ink dark:text-white">
                     {project.title}
                   </h2>
-                  <p className="text-ink-soft dark:text-cream/70 text-sm sm:text-base font-sans">
+                  <p className="text-ink-soft dark:text-neutral-200 text-sm sm:text-base font-sans">
                     {project.tagline}
                   </p>
                 </div>
@@ -154,7 +154,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
             <button
               onClick={onClose}
               aria-label="Close project dossier"
-              className="group p-2 sm:px-3 sm:py-1.5 rounded-full bg-paper/80 dark:bg-[#1E1B18] border border-ink/15 dark:border-cream/15 text-ink-soft hover:text-ink dark:text-cream/80 dark:hover:text-cream transition-all hover:scale-105 active:scale-95 shadow-sm flex items-center gap-1.5"
+              className="group p-2 sm:px-3 sm:py-1.5 rounded-full bg-paper/80 dark:bg-[#1E1B18] border border-ink/15 dark:border-white/20 text-ink-soft hover:text-ink dark:text-white/80 dark:hover:text-white transition-all hover:scale-105 active:scale-95 shadow-sm flex items-center gap-1.5"
             >
               <span className="hidden sm:inline font-hand text-sm">esc</span>
               <X size={18} className="transition-transform group-hover:rotate-90" />
@@ -162,13 +162,13 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
           </div>
 
           {/* Tab Controls for Creative Media Showcase */}
-          <div className="flex items-center gap-2 mb-6 border-b border-dashed border-ink/15 dark:border-cream/15 pb-3 flex-wrap">
+          <div className="flex items-center gap-2 mb-6 border-b border-dashed border-ink/15 dark:border-white/15 pb-3 flex-wrap">
             <button
               onClick={() => setActiveTab("preview")}
               className={`px-4 py-1.5 rounded-full font-hand text-lg transition-all flex items-center gap-2 ${
                 activeTab === "preview"
                   ? "bg-terra text-white shadow-sm -rotate-1"
-                  : "bg-paper/60 dark:bg-[#1E1B18] text-ink-soft dark:text-cream/70 hover:text-ink"
+                  : "bg-paper/60 dark:bg-[#1E1B18] text-ink-soft dark:text-neutral-200 hover:text-ink dark:hover:text-white"
               }`}
             >
               <Sparkles size={16} /> Visual Showcase & Screenshots
@@ -178,7 +178,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
               className={`px-4 py-1.5 rounded-full font-hand text-lg transition-all flex items-center gap-2 ${
                 activeTab === "architecture"
                   ? "bg-terra text-white shadow-sm rotate-1"
-                  : "bg-paper/60 dark:bg-[#1E1B18] text-ink-soft dark:text-cream/70 hover:text-ink"
+                  : "bg-paper/60 dark:bg-[#1E1B18] text-ink-soft dark:text-neutral-200 hover:text-ink dark:hover:text-white"
               }`}
             >
               <Layers size={16} /> Architecture & Pipeline
@@ -217,7 +217,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                         {/* Screenshot Switcher Pills */}
                         {project.screenshots.length > 1 && (
                           <div className="flex items-center gap-1.5 mt-3 flex-wrap">
-                            <span className="font-hand text-xs text-ink-soft dark:text-cream/60 mr-1 flex items-center gap-1">
+                            <span className="font-hand text-xs text-ink-soft dark:text-neutral-300 mr-1 flex items-center gap-1">
                               <Images size={12} /> views:
                             </span>
                             {project.screenshots.map((s, idx) => (
@@ -226,8 +226,8 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                                 onClick={() => setActiveScreenshotIdx(idx)}
                                 className={`text-xs px-2.5 py-1 rounded-full transition-all font-sans ${
                                   activeScreenshotIdx === idx
-                                    ? "bg-terra text-white font-medium shadow-xs"
-                                    : "bg-paper dark:bg-[#25221F] text-ink-soft dark:text-cream/70 hover:text-ink border border-ink/10 dark:border-cream/10"
+                                    ? "bg-terra text-white font-medium shadow-sm"
+                                    : "bg-paper dark:bg-[#25221F] text-ink-soft dark:text-neutral-300 hover:text-ink dark:hover:text-white border border-ink/10 dark:border-white/10"
                                 }`}
                               >
                                 {s.label}
@@ -252,7 +252,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                     )}
 
                     {/* Polaroid Bottom Caption */}
-                    <div className="mt-3 flex items-center justify-between text-xs sm:text-sm font-hand text-ink-soft dark:text-cream/70 pt-1 border-t border-dashed border-ink/10 dark:border-cream/10">
+                    <div className="mt-3 flex items-center justify-between text-xs sm:text-sm font-hand text-ink-soft dark:text-neutral-300 pt-1 border-t border-dashed border-ink/10 dark:border-white/15">
                       <span>{currentScreenshot?.label || project.title} · live artifact</span>
                       <span className="text-terra dark:text-coral">scrapbook preview ✍️</span>
                     </div>
@@ -260,7 +260,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                 </div>
               ) : (
                 /* Architecture & Flow Card */
-                <div className="relative p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#1C1A18] shadow-md border border-ink/10 dark:border-cream/10 font-mono text-xs sm:text-sm">
+                <div className="relative p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#1C1A18] shadow-md border border-ink/10 dark:border-white/10 font-mono text-xs sm:text-sm">
                   <div
                     className="absolute -top-3 left-8 w-24 h-5 rotate-2 shadow-sm pointer-events-none"
                     style={{
@@ -273,7 +273,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                     <span>System Data Flow & Topology</span>
                   </div>
 
-                  <div className="p-4 rounded-xl bg-paper/60 dark:bg-[#121110] border border-ink/10 dark:border-cream/10 leading-relaxed text-ink/90 dark:text-cream/90 overflow-x-auto">
+                  <div className="p-4 rounded-xl bg-paper/60 dark:bg-[#121110] border border-ink/10 dark:border-white/10 leading-relaxed text-ink/90 dark:text-white overflow-x-auto">
                     <pre className="whitespace-pre font-mono text-xs">
 {project.architecture || `[Client UI] ──(REST/Events)──> [Backend Node Engine]
       │                                │
@@ -282,7 +282,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                     </pre>
                   </div>
 
-                  <div className="mt-4 space-y-2 font-sans text-sm text-ink-soft dark:text-cream/80">
+                  <div className="mt-4 space-y-2 font-sans text-sm text-ink-soft dark:text-neutral-200">
                     <p className="flex items-start gap-2">
                       <span className="text-terra font-bold">→</span>
                       <span><strong>State Integrity:</strong> Clear separation of concerns with atomic operations.</span>
@@ -297,14 +297,14 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
 
               {/* Tech Stack Pills */}
               <div className="mt-2">
-                <span className="text-xs uppercase tracking-wider font-bold text-accent block mb-2">
+                <span className="text-xs uppercase tracking-wider font-bold text-accent dark:text-coral block mb-2">
                   Built with & Stack
                 </span>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs font-medium px-3 py-1 rounded-full bg-paper dark:bg-[#1C1A18] border border-ink/10 dark:border-cream/15 text-ink/80 dark:text-cream/80"
+                      className="text-xs font-medium px-3 py-1 rounded-full bg-paper dark:bg-[#1C1A18] border border-ink/10 dark:border-white/15 text-ink/80 dark:text-white"
                     >
                       #{tag}
                     </span>
@@ -319,18 +319,18 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
             {/* Dossier Details & Actions (5 cols on desktop) */}
             <div className="lg:col-span-5 flex flex-col justify-between h-full space-y-6">
               <div>
-                <span className="text-xs uppercase tracking-wider font-bold text-accent block mb-2">
+                <span className="text-xs uppercase tracking-wider font-bold text-accent dark:text-coral block mb-2">
                   Overview & Engineering Notes
                 </span>
-                <p className="text-ink/90 dark:text-cream/90 leading-relaxed font-sans text-sm sm:text-base mb-6">
+                <p className="text-ink/90 dark:text-white leading-relaxed font-sans text-sm sm:text-base mb-6">
                   {project.longDesc || project.desc}
                 </p>
 
                 {/* Key Features Bullet List */}
-                <span className="text-xs uppercase tracking-wider font-bold text-accent block mb-2.5">
+                <span className="text-xs uppercase tracking-wider font-bold text-accent dark:text-coral block mb-2.5">
                   Core Highlights
                 </span>
-                <ul className="space-y-2.5 text-sm text-ink-soft dark:text-cream/80">
+                <ul className="space-y-2.5 text-sm text-ink-soft dark:text-neutral-200">
                   {project.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-2.5 leading-snug">
                       <CheckCircle2
@@ -344,7 +344,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
               </div>
 
               {/* Action Buttons */}
-              <div className="pt-4 border-t border-dashed border-ink/15 dark:border-cream/15 space-y-3">
+              <div className="pt-4 border-t border-dashed border-ink/15 dark:border-white/15 space-y-3">
                 {project.link ? (
                   <a
                     href={project.link}

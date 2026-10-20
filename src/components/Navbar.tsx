@@ -12,26 +12,26 @@ export const Navbar = () => {
   
   return (
     <>
-      <header className="sticky top-0 w-full py-2 px-8 md:px-16 flex justify-around items-center z-50 bg-cream/40 backdrop-blur-xl border-b border-ink/5 shadow-sm transition-colors duration-500">
-        <Link href="/" className="font-serif font-bold text-xl tracking-tight relative z-50">
+      <header className="sticky top-0 w-full py-2 px-6 md:px-16 flex justify-between md:justify-around items-center z-50 bg-cream/70 dark:bg-[#1a1918]/80 backdrop-blur-xl border-b border-ink/5 dark:border-white/10 shadow-sm transition-colors duration-500">
+        <Link href="/" className="font-serif font-bold text-xl tracking-tight relative z-50 text-ink dark:text-white">
           Abhishek Verma<span className="text-accent">.</span>
         </Link>
         
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8 font-light relative z-50">
-          <Link href="/" className={`${pathname === '/' ? 'text-accent' : 'text-ink'} hover:text-accent transition-colors`}>Home</Link>
-          <Link href="/about" className={`${pathname === '/about' ? 'text-accent' : 'text-ink'} hover:text-accent transition-colors`}>About & Works</Link>
-          <Link href="/notes" className={`${pathname === '/notes' ? 'text-accent' : 'text-ink'} hover:text-accent transition-colors`}>Resources</Link>
+          <Link href="/" className={`${pathname === '/' ? 'text-accent' : 'text-ink dark:text-white'} hover:text-accent transition-colors`}>Home</Link>
+          <Link href="/about" className={`${pathname === '/about' ? 'text-accent' : 'text-ink dark:text-white'} hover:text-accent transition-colors`}>About & Works</Link>
+          <Link href="/notes" className={`${pathname === '/notes' ? 'text-accent' : 'text-ink dark:text-white'} hover:text-accent transition-colors`}>Resources</Link>
           <div className="flex items-center gap-4 ml-4">
-            <Link href="/contact" className="btn">Work with me</Link>
+            <Link href="/contact" className="btn shadow-sm">Work with me</Link>
             <ThemeSwitcher />
           </div>
         </nav>
 
         {/* Mobile controls */}
-        <div className="md:hidden flex items-center gap-4 relative z-50">
+        <div className="md:hidden flex items-center gap-3 relative z-50">
           <button 
-            className="p-2 text-ink dark:text-cream"
+            className="p-2 text-ink dark:text-white"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >

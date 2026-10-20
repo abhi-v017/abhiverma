@@ -251,8 +251,8 @@ export const Works = () => {
         <span className="text-accent uppercase tracking-widest text-sm font-bold mb-2 block">
           selected works
         </span>
-        <h2 className="text-4xl md:text-5xl font-serif font-bold">Projects I'm building</h2>
-        <p className="text-ink-soft dark:text-cream/70 mt-4 max-w-xl mx-auto text-lg">
+        <h2 className="text-4xl md:text-5xl font-serif font-bold dark:text-white">Projects I'm building</h2>
+        <p className="text-ink-soft dark:text-neutral-200 mt-4 max-w-xl mx-auto text-lg">
           A mix of production applications, distributed systems, and experimental tools I'm currently working on.
         </p>
         <span className="font-hand text-xl text-terra dark:text-coral inline-block mt-3 -rotate-1">
@@ -265,24 +265,24 @@ export const Works = () => {
           <div 
             key={project.id} 
             onClick={() => setSelectedProject(project)}
-            className={`fcard ${project.tape} flex flex-col group mt-2 relative cursor-pointer hover:-translate-y-1.5 transition-all duration-300 hover:shadow-lg`}
+            className={`fcard ${project.tape} flex flex-col group mt-2 relative cursor-pointer hover:-translate-y-1.5 transition-all duration-300 hover:shadow-lg dark:text-white`}
           >
             {/* Top Row: Icon & Status Badge */}
             <div className="text-4xl mb-4 flex justify-between items-start">
               <span>{project.icon}</span>
               {project.inProgress ? (
-                <span className="text-sm font-hand bg-paper dark:bg-[#1C1A18] px-3 py-1 rounded-full border border-ink/10 dark:border-cream/10 shadow-sm text-terra dark:text-coral rotate-2">
+                <span className="text-sm font-hand bg-paper dark:bg-[#1C1A18] px-3 py-1 rounded-full border border-ink/10 dark:border-white/10 shadow-sm text-terra dark:text-coral rotate-2">
                   🚧 In Making
                 </span>
               ) : (
-                <span className="text-xs font-hand bg-[#A9B89E]/20 text-[#546b43] dark:text-[#a5c28e] px-2.5 py-0.5 rounded-full border border-[#A9B89E]/30 -rotate-1">
+                <span className="text-xs font-hand bg-[#A9B89E]/20 text-[#546b43] dark:text-[#b4d69b] px-2.5 py-0.5 rounded-full border border-[#A9B89E]/30 -rotate-1">
                   ✓ Shipped
                 </span>
               )}
             </div>
             
             {/* Project Title */}
-            <h3 className="font-serif font-bold text-2xl mb-1 group-hover:text-accent transition-colors flex items-center justify-between">
+            <h3 className="font-serif font-bold text-2xl mb-1 group-hover:text-accent transition-colors flex items-center justify-between text-ink dark:text-white">
               <span>{project.title}</span>
               <span className="opacity-0 group-hover:opacity-100 transition-opacity text-terra dark:text-coral text-lg font-hand">
                 dossier ↗
@@ -290,24 +290,24 @@ export const Works = () => {
             </h3>
 
             {/* Tagline / Subtitle */}
-            <span className="text-xs text-ink-soft dark:text-cream/60 font-sans mb-3 block">
+            <span className="text-xs text-ink-soft dark:text-neutral-300 font-sans mb-3 block">
               {project.tagline}
             </span>
             
             {/* Short Description */}
-            <p className="text-ink-soft dark:text-cream/80 mb-6 flex-grow text-sm leading-relaxed">
+            <p className="text-ink-soft dark:text-neutral-200 mb-6 flex-grow text-sm leading-relaxed">
               {project.desc}
             </p>
             
             {/* Tech Badge */}
             <div className="mb-6">
-              <span className="text-xs font-medium text-ink/70 dark:text-cream/70 bg-ink/5 dark:bg-cream/10 py-1.5 px-3 rounded-md">
+              <span className="text-xs font-medium text-ink/70 dark:text-white bg-ink/5 dark:bg-white/10 py-1.5 px-3 rounded-md">
                 {project.tech}
               </span>
             </div>
             
             {/* Bottom Row: Direct Link / Status & Inspect Dossier trigger */}
-            <div className="flex items-center justify-between pt-3 border-t border-dashed border-ink/10 dark:border-cream/10 text-sm">
+            <div className="flex items-center justify-between pt-3 border-t border-dashed border-ink/10 dark:border-white/15 text-sm">
               <div className="font-hand text-lg">
                 {project.link ? (
                   <a 
@@ -321,7 +321,7 @@ export const Works = () => {
                     <span className="transition-transform group-hover/link:translate-x-0.5">&rarr;</span>
                   </a>
                 ) : (
-                  <span className="text-ink-soft/60 dark:text-cream/40 cursor-default">
+                  <span className="text-ink-soft/60 dark:text-neutral-400 cursor-default">
                     Code coming soon
                   </span>
                 )}
