@@ -49,6 +49,7 @@ export default function NotesPage() {
       desc: "Event loop, closures, promises, and the weird parts of JS.",
       tags: ["Web", "Coming Soon"],
       rotation: "-rotate-1",
+      link: "https://drive.google.com/file/d/1KeZA0vtDZPmJ16bek6GdpjMO1hIG7ghY/view?usp=drive_link"
     },
     {
       id: "HTML",
