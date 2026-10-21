@@ -22,8 +22,9 @@ export default function NotesPage() {
       icon: "🚀",
       title: "C++",
       desc: "Object-oriented programming, STL, and competitive programming.",
-      tags: ["OOP", "Coming Soon"],
+      tags: ["OOP"],
       rotation: "rotate-2",
+      link:"https://drive.google.com/file/d/15l_GrINUGZw9CM0Tw-aupcgZzddkTAWN/view?usp=drive_link"
     },
     {
       id: "java",
@@ -41,13 +42,14 @@ export default function NotesPage() {
       desc: "Data structures, scripting, and automation cheat codes.",
       tags: ["Scripting", "Coming Soon"],
       rotation: "rotate-1",
+      link:"https://drive.google.com/file/d/1XRva9KJEogtlzc6YPfvysw1tprJ739qM/view?usp=drive_link"
     },
     {
       id: "javascript",
       icon: "💛",
       title: "JavaScript",
       desc: "Event loop, closures, promises, and the weird parts of JS.",
-      tags: ["Web", "Coming Soon"],
+      tags: ["Web"],
       rotation: "-rotate-1",
       link: "https://drive.google.com/file/d/1KeZA0vtDZPmJ16bek6GdpjMO1hIG7ghY/view?usp=drive_link"
     },
