@@ -33,7 +33,7 @@ export const About = () => {
                 With a strong foundation in Data Structures, Algorithms, and System Design, I've independently designed, built, and deployed production-grade applications. Whether it's integrating real-time WebSockets, designing REST APIs, or exploring the latest AI tools, I'm always looking for the most efficient way to solve real-world problems.
               </p>
             </div>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="btn ghost mt-8">Connect on LinkedIn</a>
+            <a href="https://linkedin.com/in/vermabhi017" target="_blank" rel="noopener noreferrer" className="btn ghost mt-8">Connect on LinkedIn</a>
           </div>
           
         </div>

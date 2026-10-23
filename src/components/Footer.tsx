@@ -57,8 +57,8 @@ const EmailIcon = () => (
 const SOCIAL_HANDLES: SocialHandle[] = [
   {
     name: "Instagram",
-    handle: "@abekdev.exe",
-    url: "https://www.instagram.com/abekdev.exe/",
+    handle: "@me.abek",
+    url: "https://www.instagram.com/me.abek/",
     icon: InstagramIcon,
     color: "#E4405F",
     tilt: "rotate-[-1.5deg]"
@@ -184,7 +184,7 @@ export const Footer = ({ showSocials = true }: { showSocials?: boolean }) => {
             Code with Purpose
           </div>
           <div className="text-xs sm:text-sm">
-            &copy; {new Date().getFullYear()} Abhishek Verma. All rights reserved.
+            &copy; {new Date().getFullYear()} Abhishek Verma. All rights reserved. &middot; Kanpur, Uttar Pradesh, India
           </div>
         </div>
       </div>

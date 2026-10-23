@@ -54,16 +54,20 @@ const WhatsAppIcon = () => (
 export default function ContactPage() {
   const [isCopiedEmail, setIsCopiedEmail] = useState(false);
   const [isCopiedPhone, setIsCopiedPhone] = useState(false);
+  const [isCopiedAddress, setIsCopiedAddress] = useState(false);
 
   // Copy helpers
-  const handleCopy = (text: string, type: "email" | "phone") => {
+  const handleCopy = (text: string, type: "email" | "phone" | "address") => {
     navigator.clipboard.writeText(text);
     if (type === "email") {
       setIsCopiedEmail(true);
       setTimeout(() => setIsCopiedEmail(false), 2200);
-    } else {
+    } else if (type === "phone") {
       setIsCopiedPhone(true);
       setTimeout(() => setIsCopiedPhone(false), 2200);
+    } else if (type === "address") {
+      setIsCopiedAddress(true);
+      setTimeout(() => setIsCopiedAddress(false), 2200);
     }
   };
 
@@ -127,8 +131,8 @@ export default function ContactPage() {
     },
     {
       name: "Instagram",
-      handle: "@abekdev.exe",
-      url: "https://www.instagram.com/abekdev.exe/",
+      handle: "@me.abek",
+      url: "https://www.instagram.com/me.abek/",
       icon: InstagramIcon,
       accent: "#E4405F",
       badge: "📸 Visuals & Setup",
@@ -199,10 +203,22 @@ export default function ContactPage() {
               <div className="w-8 h-8 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
                 <MapPin size={17} />
               </div>
-              <div>
-                <span className="font-bold block text-ink dark:text-white mb-0.5">Location & Timezone</span>
-                <span className="text-ink-soft dark:text-neutral-300 leading-relaxed">
-                  India (IST / UTC+5:30) · Smooth daily sync overlap with US, UK, and European teams.
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="font-bold block text-ink dark:text-white mb-0.5">Location & Base Address</span>
+                  <button
+                    onClick={() => handleCopy("58A/2 Dabauli 2, Kanpur, Uttar Pradesh, India", "address")}
+                    title="Copy address to clipboard"
+                    className="text-[10px] font-sans px-2 py-0.5 rounded-md bg-paper dark:bg-[#2A2622] text-ink-soft dark:text-neutral-300 hover:text-terra dark:hover:text-coral border border-ink/10 dark:border-white/10 transition-colors cursor-pointer shrink-0"
+                  >
+                    {isCopiedAddress ? "Copied! ✓" : "Copy 📋"}
+                  </button>
+                </div>
+                <span className="text-ink-soft dark:text-neutral-300 leading-relaxed block text-xs">
+                  58A/2 Dabauli 2, Kanpur, Uttar Pradesh, India
+                </span>
+                <span className="text-[11px] font-mono text-terra dark:text-coral block mt-0.5">
+                  IST (UTC+5:30) · US & EU sync overlap friendly
                 </span>
               </div>
             </div>
