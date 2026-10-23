@@ -3,6 +3,7 @@
 import { Hero } from "@/components/Hero";
 import Link from "next/link";
 import { About } from "@/components/About";
+import { TechStack } from "@/components/TechStack";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -13,6 +14,10 @@ export default function Home() {
       <div className="py-12">
         <About />
       </div>
+      
+      <div className="divider"></div>
+
+      <TechStack />
       
       <div className="divider"></div>
       

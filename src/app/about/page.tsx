@@ -1,7 +1,7 @@
 "use client";
 
 import { About } from "@/components/About";
-import { Services } from "@/components/Services";
+import { TechStack } from "@/components/TechStack";
 import { Works } from "@/components/Works";
 import { Footer } from "@/components/Footer";
 import Link from "next/link";
@@ -12,7 +12,9 @@ export default function AboutPage() {
       <div className="pt-12">
         <About />
       </div>
-      <Services />
+      <div className="divider"></div>
+      <TechStack />
+      <div className="divider"></div>
       <Works />
       
       <div className="divider"></div>
