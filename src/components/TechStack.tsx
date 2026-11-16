@@ -115,7 +115,7 @@ const ALL_SKILLS: TechSkill[] = [
     ],
     role: "Systems & Scripting",
     tilt: "rotate-[1.5deg]",
-    associatedProject: { name: "Distributed MapReduce", url: "https://github.com/abhi-v017/-distributed-mapreduce" },
+    associatedProject: { name: "Distributed MapReduce", url: "https://github.com/abhi-v017/distributed-mapreduce" },
     accentColor: "#38BDF8"
   },
 

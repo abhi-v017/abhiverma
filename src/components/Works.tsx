@@ -86,6 +86,7 @@ const PROJECTS: ProjectData[] = [
         ├─► [Firebase Firestore & Firebase Auth]
         └─► [node-cron (Scheduled Habit Reminders & Push Notifications)]`,
     link: "https://github.com/abhi-v017/aesthetix",
+    liveUrl: "https://aesthetix-lime.vercel.app/dashboard",
     tape: "tape-pink",
     inProgress: false,
     screenshots: [
@@ -170,7 +171,7 @@ const PROJECTS: ProjectData[] = [
             └──────────────┬──────┴─────────────────────┘
                            ▼
             [mr-out-*.txt (word <TAB> count / inverted index)]`,
-    link: "https://github.com/abhi-v017/-distributed-mapreduce",
+    link: "https://github.com/abhi-v017/distributed-mapreduce",
     tape: "tape-blue",
     inProgress: false,
     screenshots: [
@@ -307,8 +308,8 @@ export const Works = () => {
             </div>
             
             {/* Bottom Row: Direct Link / Status & Inspect Dossier trigger */}
-            <div className="flex items-center justify-between pt-3 border-t border-dashed border-ink/10 dark:border-white/15 text-sm">
-              <div className="font-hand text-lg">
+            <div className="flex items-center justify-between pt-3 border-t border-dashed border-ink/10 dark:border-white/15 text-sm gap-2 flex-wrap">
+              <div className="font-hand text-lg flex items-center gap-3">
                 {project.link ? (
                   <a 
                     href={project.link} 
@@ -324,6 +325,17 @@ export const Works = () => {
                   <span className="text-ink-soft/60 dark:text-neutral-400 cursor-default">
                     Code coming soon
                   </span>
+                )}
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="text-emerald-600 dark:text-emerald-400 hover:underline inline-flex items-center gap-0.5 text-base font-hand"
+                  >
+                    <span>Live ↗</span>
+                  </a>
                 )}
               </div>
 
